@@ -1,5 +1,5 @@
-# Jigsaw-Captcha-Breaker
-Using this code to pass some jigsaw captcha!
+# Puzzle-Captcha-Breaker
+Using this code to pass some jigsaw puzzle captcha!
 
 这是一个基于VGG16模型搭建的对付推理拼图验证码的神经网络模型。
 
