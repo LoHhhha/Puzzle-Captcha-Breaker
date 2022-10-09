@@ -19,6 +19,8 @@ Using this code to pass some jigsaw puzzle captcha!
 
 将待识别的图片文件转为320X160后放入Demo文件夹，运行Demo可得到预测结果。在后续开发时，发现Demo.py文件若改为仅仅搜索“1可能性最大”的结果正确率会更高。
 
+Demo的效果可以查看Example.png。
+
 以下是文件清单
     
     这里是对Demo做了一个整合，方便项目开发。
