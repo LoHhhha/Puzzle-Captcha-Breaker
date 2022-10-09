@@ -25,7 +25,7 @@ Using this code to pass some jigsaw puzzle captcha!
 
     -PassCode.py
         验证码图片运算
-    -ImageTube.py
+    -ImgDataTube.py
         将验证码图片发送到模型
 
 -bisection_Net.py
