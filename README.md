@@ -23,27 +23,27 @@ Using this code to pass some jigsaw puzzle captcha!
 
 -bisection_Net.py
 
-  神经网络模型
+    神经网络模型
 
 -bisection_ImgDataSet.py
 
-  重写DataSet
+    重写DataSet
 
 -bisection_GetDataSet.py
 
-  获取所需的DataSet文件（将320X160的正常图片文件转化为拼图）
+    获取所需的DataSet文件（将320X160的正常图片文件转化为拼图）
 
 -bisection_Train.py
  
-  训练文件
+    训练文件
 
 -Demo.py
 
-  根据输入图片输出对应答案
+    根据输入图片输出对应答案
 
 -Transform.py
 
-  将普通图片转化为320X160的图片
+    将普通图片转化为320X160的图片
 
 -Net_save
 
