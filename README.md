@@ -17,12 +17,11 @@ Using this code to pass some jigsaw puzzle captcha!
 
 训练完成的模型没有上传，文件太大了。
 
-将待识别的图片文件转为320X160后放入Demo文件夹，运行Demo可得到预测结果。
-
-注：在后续开发时，发现Demo.py文件若改为仅仅搜索“1可能性最大”的结果正确率会更高。
+将待识别的图片文件转为320X160后放入Demo文件夹，运行Demo可得到预测结果。在后续开发时，发现Demo.py文件若改为仅仅搜索“1可能性最大”的结果正确率会更高。
 
 以下是文件清单
-
+    
+    这里是对Demo做了一个整合，方便项目开发。
     -PassCode.py
         验证码图片运算
     -ImgDataTube.py
