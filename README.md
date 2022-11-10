@@ -1,7 +1,7 @@
 # Puzzle-Captcha-Breaker
 Using this code to pass some jigsaw puzzle captcha!
 
-这是一个基于VGG16模型搭建的对付推理拼图验证码的神经网络模型。
+这是一个基于深度学习模型搭建的对付推理拼图验证码的神经网络模型。
 
 环境：Anaconda@python3.9.12
 
@@ -14,8 +14,6 @@ Using this code to pass some jigsaw puzzle captcha!
 若你感兴趣，可以将找到的图片放进material文件夹，运行Transform.py将图片转化为320X160输出至material_320_160文件夹，之后运行bisection_GetDataSet.py将图片文件输出到Train_dataset，Test_dataset（脚本默认随机输出一张调换位置的图片和一张原图，均带标签），之后运行bisection_Train.py开始训练。
 
 之后可以根据代码注释，调用PassCode.py，完成对验证码的求解。
-
-训练完成的模型没有上传，文件太大了。
 
 将待识别的图片文件转为320X160后放入Demo文件夹，运行Demo可得到预测结果。在后续开发时，发现Demo.py文件若改为仅仅搜索“1可能性最大”的结果正确率会更高。
 
