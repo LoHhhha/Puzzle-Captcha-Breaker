@@ -19,6 +19,8 @@ Using this code to pass some jigsaw puzzle captcha!
 
 Demo的效果可以查看Example.png。
 
+训练完成的模型没有上传，太大了。
+
 ![image](Example.png)
 
 以下是文件清单
