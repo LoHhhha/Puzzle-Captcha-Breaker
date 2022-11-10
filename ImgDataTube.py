@@ -27,7 +27,5 @@ class ImgDataTube(Dataset):
         img_path = os.listdir(data_path)
         for path in img_path:
             temp_val = path[0:2]
-            if temp_val != "C0" or "C1":
-                temp_val = "C0"
             data_info.append((data_path + '/' + path, labels[temp_val], path))
         return data_info
