@@ -1,7 +1,7 @@
 import os
 import shutil
 from bisection_ImgDataSet import ImgDataSet
-from bisection_Net import Net
+from NEW_Net import Net
 import torch
 import torchvision
 from torch import nn
@@ -9,12 +9,12 @@ from torch.utils.data import DataLoader
 from torch.utils.tensorboard import SummaryWriter
 
 # macro definition
-learning_rate = 0.000001
+learning_rate = 0.0001
 epoch = 3
 
 # loading dataset
 train_dataset = ImgDataSet("./Train_dataset", transform=torchvision.transforms.ToTensor())
-train_DataLoader = DataLoader(train_dataset, batch_size=1, shuffle=True)
+train_DataLoader = DataLoader(train_dataset, batch_size=8, shuffle=True)
 
 test_dataset = ImgDataSet("./Test_dataset", transform=torchvision.transforms.ToTensor())
 test_DataLoader = DataLoader(test_dataset, batch_size=1, shuffle=True)
@@ -40,7 +40,7 @@ else:
     print("Use a new_Net")
 if os.path.isfile("./Net_save/train_num"):
     train_num = ''
-    with open("./Net_save/train_num", encoding='UTF-8') as fp:
+    with open("./New_Net_save/train_num", encoding='UTF-8') as fp:
         train_num += fp.read()
     train_num = int(train_num)
 else:
@@ -87,7 +87,7 @@ for cur_time in range(train_num, train_num + epoch):
         loss_results.backward()
         optim.step()
 
-        true_num += (outputs.argmax().item() == targets.item())
+        true_num += (outputs.argmax(1) == targets).sum()
         cur_total_train += 1
 
         if cur_total_train % 20 == 0:
@@ -114,8 +114,10 @@ for cur_time in range(train_num, train_num + epoch):
 
             # get info
             results = outputs.argmax()
-            print("From", img_name, ":")
-            print('\t', outputs, "target:", targets.item(), "get:", results.item(), '->', (results.item() == targets.item()))
+
+            # print("From", img_name, ":")
+            # print('\t', outputs, "target:", targets.item(), "get:", results.item(), '->',
+            #       (results.item() == targets.item()))
 
             true_num += (results.item() == targets.item())
             loss_results = loss(outputs, targets)
